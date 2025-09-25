@@ -13,11 +13,19 @@ This repository was introduced in a lesson given by [Héctor García de Marina](
 
 ## Installation
 
-To install the required dependencies, simply run:
-
+We recommend creating a dedicated virtual environment to ensure that the project dependencies do not conflict with other Python packages:
 ```bash
-python install.py
+python -m venv venv
+source venv/bin/activate
 ```
+Then, install the required dependencies:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+> ```requirements.txt``` contains the versions tested for **compatibility with the simulator**.
+Do **not modify the versions** to ensure stable and reproducible environments. Note that ```ssl_simulator``` already provides stable versions for the following core packages: ```numpy```, ```matplotlib```, ```tqdm```, ```pandas```, ```scipy```, ```ipython```.
 
 ### Additional Dependencies
 Some additional dependencies, such as LaTeX fonts and FFmpeg, may be required. We recommend following the installation instructions provided in the ```ssl_simulator``` [README](https://github.com/Swarm-Systems-Lab/ssl_simulator/blob/master/README.md). 
